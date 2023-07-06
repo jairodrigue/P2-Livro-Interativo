@@ -137,6 +137,7 @@ public class Main {
                     cap7.mostrar();
                     Capítulo.escolher();
                     leitor.energiaMudar(-180);
+
                 } else if (c3.equals("2")) {
                     cap6.mostrar();
                     leitor.energiaMudar(fada.energia);
