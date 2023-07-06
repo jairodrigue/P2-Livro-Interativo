@@ -2,205 +2,181 @@ import java.util.Scanner;
 
 public class Main {
 
-    Personagem leitor = new Personagem("inicial", 1000);
-    Personagem dragaoAlce = new Personagem("Dragão dos Alces", 200);
-    Personagem mago = new Personagem("Mago", -800);
-    Personagem troll = new Personagem("Troll das Sombras", -970);
-    Personagem dragao20C = new Personagem("Dragão de 20 Cabeças", 200);
-    Personagem fada = new Personagem("Fada Vermelha", -950);
-    Personagem mostroP = new Personagem("Mostro do Pântano", 590);
-
     public static void main(String[] args) {
-        Main livroI = new Main();
-        livroI.iniciarLivro();
-        livroI.finais();
-        livroI.movimentacoes();
-        System.exit(0);
 
-    }
+        // Instanciando os personagens
+        Personagem leitor = new Personagem("inicial", 1000);
+        Personagem dragaoAlce = new Personagem("Dragão dos Alces", 200);
+        Personagem mago = new Personagem("Mago", -800);
+        Personagem troll = new Personagem("Troll das Sombras", -970);
+        Personagem dragao20C = new Personagem("Dragão de 20 Cabeças", 200);
+        Personagem fada = new Personagem("Fada Vermelha", -950);
+        Personagem mostroP = new Personagem("Mostro do Pântano", 590);
 
-    public void iniciarLivro() {
+        // História
+        String introducao = ("\nBem-vindo ao incrível mundo interativo de -O Despertar do Aventureiro:\n"
+                + "Em Busca da Pedra Encantada. Prepare-se para embarcar em uma jornada\n"
+                + "emocionante, repleta de mistérios e desafios, onde você será o \n"
+                + "protagonista dessa incrível aventura.\n"
+                + "Neste livro, você assumirá o papel de um destemido aventureiro, cuja\n"
+                + "coragem e determinação serão postas à prova. Sua missão é desbravar\n"
+                + "terras desconhecidas, enfrentar criaturas místicas em busca da\n"
+                + "lendária Pedra Encantada. A pedra é a úninica esperança para salvar\n"
+                + "sua família de uma terrível ameaça que paira sobre eles.");
 
-        Livro livro = new Livro();
+        String capitulo1 = ("\nVocê acorda em sua pequena cabana, localizada em uma vila isolada. O \n"
+                + "o vento sussurra sobre uma antiga profecia que paira sobre sua família.\n"
+                + "Intrigado, decide investigar e descobre que uma pedra mística,\n"
+                + "conhecida como a Pedra Encantada, possui o poder de salvar sua família de\n"
+                + "uma terrível ameaça. Animado e decidido a enfrentar qualquer desafio, você\n"
+                + "parte em uma jornada em busca dessa pedra lendária.\n"
+                + "\n"
+                + "Qual caminho você escolhe para começar sua busca?");
 
+        String capitulo2 = ("Você decide aventurar-se pela Floresta Proibida, um local sombrio e\n"
+                + "misterioso, cheio de criaturas perigosas e enigmas ocultos. Enquanto\n"
+                + "caminha pelas trilhas sinuosas, um terrível dragão dos Alces paira bem\n"
+                + "na sua frente.\n"
+                + "\n"
+                + "O que você faz agora?");
+
+        String capitulo3 = ("Você opta por enfrentar os desafios das Montanhas da Perdição, um local\n"
+                + "inóspito e traiçoeiro, com picos cobertos de neve e abismos profundos.\n"
+                + "Enquanto escala as íngremes encostas, se depara com um mago assustador que\n"
+                + "te chama e te dá uma poção.\n"
+                + "\n"
+                + "Você não sabe o efeito da poção. O que você faz?");
+
+        String capitulo4 = ("Seu coração bate acelerado enquanto você segue o caminho iluminado pelo\n"
+                + "sol. No entanto, ao longo do trajeto, você escuta um rugido assustador e\n"
+                + "um monstro emerge dos arbustos à sua frente. O monstro é um temível Troll\n"
+                + "das Sombras chamado Grunthor, um ser enorme com presas afiadas e olhos \n"
+                + "faiscantes.\n"
+                + "\n"
+                + "O que você decide fazer?");
+
+        String capitulo5 = ("Você segue com o seu mapa subindo pela Montanha da Sucuri. Ao chegar no topo\n"
+                + "encontra um dragão de 20 cabeças.\n"
+                + "\n"
+                + "Assustado o que você vai fazer?");
+
+        String capitulo6 = ("Você dorme depois de um dia agitado. Mas ao acordar percebe que não está só.\n"
+                + "Existe uma fada vermelha dentro da sua mochila. Assustado você tem uma \n"
+                + "conversa com ela. Até que ela oferece ficar ao seu lado e te oferecer apoio\n"
+                + "durante sua jornada.\n"
+                + "\n"
+                + "Agora, o que você vai fazer?");
+
+        String capitulo7 = ("Sua jornada continua, e dessa vez você quase cai dentro de um pântano. Ao\n"
+                + "olhar para os lados, percebe que está em um ambiente escuro e sombrio. Surge\n"
+                + "forte e imponente um mostro, ele está completamente coberto por uma gosma \n"
+                + "verde e tem dentes assustadores.\n"
+                + "\n"
+                + "O que você vai fazer agora?");
         Scanner scan = new Scanner(System.in);
-        System.out.println("Qual seu nome: ");
-        leitor.nome = scan.nextLine();
 
-        print(livro.introducao);
-        String opcaoDoUsuario;
+        // Instanciando os capítulos
+        Capítulo cap1 = new Capítulo("Capítulo 1", capitulo1,
+                "1) Atravessar a densa Floresta Proibida.\n",
+                "2) Seguir a trilha das Montanhas da Perdição.\n",
+                leitor, leitor.energia, scan);
 
-        boolean escolhaValida = true;
-        while (escolhaValida) {
+        Capítulo cap2 = new Capítulo("Capítulo 2", capitulo2,
+                "1) Corre o máximo que puder.\n",
+                "2) Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.\n",
+                dragaoAlce, dragaoAlce.energia, scan);
 
-            opcaoDoUsuario = scan.nextLine();
+        Capítulo cap3 = new Capítulo("Capítulo 3", capitulo3, "1) Tomar a poção.\n",
+                "2) Recusar e agradecer o mago.\n",
+                mago, mago.energia, scan);
 
-            if (loop(opcaoDoUsuario, "a) atravessar a densa floresta proibida.", "a", "a)")) {
+        Capítulo cap4 = new Capítulo("Capítulo 4", capitulo4,
+                "1) Lutar contra Grunthor, usando todas as suas habilidades de combate.\n",
+                "2) Tentar escapar furtivamente, desviando-se silenciosamente e continuando\n"
+                        + "seu percurso.\n",
+                troll, troll.energia, scan);
 
-                leitor.addEnergia(200);
+        Capítulo cap5 = new Capítulo("Capítulo 5", capitulo5, "1) Matar o feroz dragão.\n",
+                "2) Correr da situação\n", dragao20C, dragao20C.energia, scan);
 
-                print("((Você conseguiu mais energia, totalizando " + (leitor.energia) + " XP))");
-                print(livro.florestaP);
-                String correrOuLutar = scan.nextLine();
+        Capítulo cap6 = new Capítulo("Capítulo 6", capitulo6, "1) Recusar proposta da fada e expulsar ela.\n",
+                "2) Não se arriscar\n", fada, fada.energia, scan);
 
-                if (loop(correrOuLutar, "a) Corre o máximo que puder.", "a)", "a")) {
-                    leitor.addEnergia(-50);
-                    print("((Você perde energia, ficando com " + (leitor.energia) + " XP))");
-                    historia();
-                } else if (loop(correrOuLutar,
-                        "b) Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.", "b", "b)"))
-                    ;
-                leitor.addEnergia(dragaoAlce.energia);
-                print("((Você ganha mais energia, ficando com " + (leitor.energia) + " XP))");
-                historia();
-                break;
-            } else if (loop(opcaoDoUsuario, "b) Seguir a trilha das Montanhas da Perdição.", "b", "b)")) {
-                leitor.addEnergia(100);
-                print("((Você conseguiu mais energia, totalizando " + (leitor.energia) + " XP))");
-                print(livro.montanhaP);
-                String aPocao = scan.nextLine();
+        Capítulo cap7 = new Capítulo("Capítulo 7", capitulo7,
+                "1) Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.\n",
+                "2) Não se arriscar\n", mostroP, mostroP.energia, scan);
 
-                if (loop(aPocao, "a) Tomar a poção.", "a)", "a")) {
-                    leitor.addEnergia(mago.energia);
-                    print("((A poção tira sua energia ficando com " + (leitor.energia) + " XP))");
-                    historia();
-                } else if (loop(aPocao, "b) Recusar e agradecer o mago.", "b", "b)")) {
-                    leitor.addEnergia(300);
-                    print("((Você se livra da poção e fica com " + (leitor.energia) + " XP))");
-                    historia();
+        // Lógica da história
+        System.out.println(introducao);
+        cap1.mostrar();
+        String c1 = Integer.toString(Capítulo.escolher());
+
+        if (c1.equals("1")) {
+            cap2.mostrar();
+            leitor.energiaMudar(dragaoAlce.energia);
+            String c2 = Integer.toString(Capítulo.escolher());
+
+            if (c2.equals("1")) {
+                cap4.mostrar();
+                leitor.energiaMudar(troll.energia);
+            } else if (c2.equals("2")) {
+                cap4.mostrar();
+                leitor.energiaMudar(156);
+            }
+        } else if (c1.equals("2")) {
+            cap3.mostrar();
+            leitor.energiaMudar(mago.energia);
+            String c3 = Integer.toString(Capítulo.escolher());
+
+            if (c3.equals("1")) {
+                cap5.mostrar();
+                leitor.energiaMudar(dragao20C.energia);
+                String c4 = Integer.toString(Capítulo.escolher());
+
+                if (c4.equals("1") || c4.equals("2")) {
+                    cap7.mostrar();
+                    Capítulo.escolher();
+                    leitor.energiaMudar(-180);
+                } else if (c3.equals("2")) {
+                    cap6.mostrar();
+                    leitor.energiaMudar(fada.energia);
+                    String c5 = Integer.toString(Capítulo.escolher());
+
+                    if (c5.equals("1") || c5.equals("2")) {
+                        cap7.mostrar();
+                        Capítulo.escolher();
+                        leitor.energiaMudar(mostroP.energia);
+                    }
+                } else if (c3.equals("2")) {
+                    cap6.mostrar();
+                    Capítulo.escolher();
+                    leitor.energiaMudar(fada.energia);
+
                 }
-            } else {
-                System.err.println("Entrada inválida!");
-                print("Tente novamente\n");
-                print(livro.menu());
-                escolhaValida = true;
             }
+
         }
-        scan.close();
-    }
-
-    public void historia() {
-        Scanner scan = new Scanner(System.in);
-        Livro livro = new Livro();
-
-        print(livro.troll);
-        String troll1 = scan.nextLine();
-        boolean validacao = true;
-        while (validacao) {
-
-            if (loop(troll1, "a) Lutar contra Grunthor, usando todas as suas habilidades de combate.", "a)", "a")) {
-                leitor.addEnergia(troll.energia);
-                print("((Você lutou, mas acabou perdendo, portanto a sua energia é " + (leitor.energia) + " XP))");
-                break;
-            } else if (loop(troll1,
-                    "b) Tentar escapar furtivamente, desviando-se silenciosamente e continuando seu percurso.",
-                    "b", "b)")) {
-                leitor.addEnergia(275);
-                print("((Você conseguiu escapar e ainda elevou sua energia que agora é " + (leitor.energia + 275)
-                        + " XP))");
-                break;
-            } else {
-                System.err.println("Digite novamente!");
-                validacao = true;
-            }
-        }
-        print(livro.dragao20C);
-        String dragao20C1 = scan.nextLine();
-
-        boolean validacao2 = true;
-        while (validacao2) {
-
-            if (loop(dragao20C1, "a) Matar o feroz dragão.", "a)", "a")) {
-                leitor.addEnergia(dragao20C.energia);
-                print("((Você conseguiu derrotar o dragão, agora tem " + leitor.energia + " XP))");
-                break;
-            } else if (loop(dragao20C1, "b)  Correr da situação", "b", "b)")) {
-                leitor.addEnergia(-500);
-                print("((Você corre do dragão, mas acaba sendo atacado e perde energias. Agora você tem "
-                        + leitor.energia + " XP))");
-                break;
-            } else {
-                System.err.println("Digite novamente!");
-                validacao2 = true;
-            }
-        }
-        print(livro.fada);
-        String fada1 = scan.nextLine();
-        boolean validacao3 = true;
-        while (validacao3) {
-            if (loop(fada1, "a) Recusar proposta da fada e expulsar ela.", "a)", "a")) {
-                leitor.addEnergia(+500);
-                print("((Você se livrou de uma enrascada e por isso sua pontuação é " + leitor.energia + " XP))");
-                break;
-            } else if (loop(fada1, "b) Aceitar a fada.", "b", "b)")) {
-                leitor.addEnergia(fada.energia);
-                print("((A fada é um demônio satânico e faz você perder pontos, ficando com " + leitor.energia
-                        + " XP))");
-                break;
-            } else {
-                System.err.println("Digite novamente!");
-                validacao3 = true;
-            }
-        }
-        print(livro.mostroP);
-        String mostro1 = scan.nextLine();
-        boolean validacao4 = true;
-        while (validacao4) {
-
-            if (loop(mostro1, "a) Lutar contra esse mostro e ter a possibilidade de melhorar suas energias.", "a)",
-                    "a")) {
-                leitor.addEnergia(mostroP.energia);
-                print("((Você consegue derrotar o mostro e ganha energia, ficando com " + leitor.energia + " XP))");
-                break;
-            } else if (loop(mostro1, "b) Não se arriscar", "b", "b)")) {
-                leitor.addEnergia(-700);
-                print("((Na tentaviva de fugir, você é atacado, e tem sua energia de " + leitor.energia + " XP))");
-                break;
-            } else {
-                System.err.println("Digite novamente!");
-                validacao4 = true;
-            }
-        }
-        scan.close();
-    }
-
-    public void movimentacoes() {
-        Scanner scan = new Scanner(System.in);
-        print("Você gostaria de ver o histórico das suas jogadas? ");
-        String movi = scan.nextLine();
-
-        if (movi.toLowerCase().equals("sim")) {
-
-            leitor.historico();
-        } else {
-            System.exit(0);
-        }
-        scan.close();
-    }
-
-    public void finais() {
-
+        // Finais
         if (leitor.energia <= 0) {
-            print("\n" + leitor.nome + " morreu!\nSua pontuação final foi " + leitor.energia + " XP");
-        } else if (leitor.energia > 0 && leitor.energia < 1000) {
 
-            print("\n" + leitor.nome
-                    + " está vivo!\nPorém não conseguiu a Pedra Encantada e, portanto, sua família permanece na ameaça.\n"
-                    + "Sua pontuação final foi " + leitor.energia + " XP");
-        } else if (leitor.energia > 1000) {
-            print("\n" + leitor.nome + " Conseguiu a Pedra Encantada!\n"
-                    + "Você salvou sua família\nSua pontuação final foi " + leitor.energia + " XP");
+            System.out.print("\n(Sua energia final é ");
+            System.out.print(leitor.energia);
+            System.out.print(" XP)\n");
+            System.out.println("Com base na presença de energia negativa, você foi levado a\n"
+                    + "óbito em decorrência de uma condição de fraqueza exacerbada.");
+        } else if (leitor.energia > 0 && leitor.energia < 1500) {
+            System.out.print("\n(Sua energia final é ");
+            System.out.print(leitor.energia);
+            System.out.print(" XP)\n");
+            System.out.println("Embora você tenha sobrevivido, infelizmente não obteve sucesso \n"
+                    + "na obtenção da Pedra Encantada.");
+        } else {
+            System.out.print("\n(Sua energia final é ");
+            System.out.print(leitor.energia);
+            System.out.print(" XP)\n");
+            System.out.println("Parabéns pela conquista da Pedra Encantada!\n" +
+                    "Com esse êxito, você agora pode salvar sua família.");
         }
     }
 
-    public boolean loop(String parametroP, String opcaoEscrita, String n, String m) {
-
-        boolean loop = parametroP.toLowerCase().equals(opcaoEscrita) ||
-                parametroP.toLowerCase().equals(n) || parametroP.toLowerCase().equals(m);
-        return loop;
-    }
-
-    public void print(String p) {
-        System.out.println(p);
-    }
 }
