@@ -77,86 +77,83 @@ public class Main {
 
         // Instanciando os capítulos
         Capítulo cap1 = new Capítulo("Capítulo 1", capitulo1,
-                "1) Atravessar a densa Floresta Proibida.\n",
-                "2) Seguir a trilha das Montanhas da Perdição.\n",
+                new String[] { "Atravessar a densa Floresta Proibida.\n",
+                        "Seguir a trilha das Montanhas da Perdição.\n" },
                 leitor, leitor.energia, scan);
 
         Capítulo cap2 = new Capítulo("Capítulo 2", capitulo2,
-                "1) Corre o máximo que puder.\n",
-                "2) Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.\n",
+                new String[] { "Corre o máximo que puder.\n",
+                        "Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.\n" },
                 dragaoAlce, dragaoAlce.energia, scan);
 
-        Capítulo cap3 = new Capítulo("Capítulo 3", capitulo3, "1) Tomar a poção.\n",
-                "2) Recusar e agradecer o mago.\n",
+        Capítulo cap3 = new Capítulo("Capítulo 3", capitulo3, new String[] { "Tomar a poção.\n",
+                "Recusar e agradecer o mago.\n" },
                 mago, mago.energia, scan);
 
         Capítulo cap4 = new Capítulo("Capítulo 4", capitulo4,
-                "1) Lutar contra Grunthor, usando todas as suas habilidades de combate.\n",
-                "2) Tentar escapar furtivamente, desviando-se silenciosamente e continuando\n"
-                        + "seu percurso.\n",
+                new String[] { "Lutar contra Grunthor, usando todas as suas habilidades de combate.\n",
+                        "Tentar escapar furtivamente, desviando-se silenciosamente e continuando\n"
+                                + "seu percurso.\n" },
                 troll, troll.energia, scan);
 
-        Capítulo cap5 = new Capítulo("Capítulo 5", capitulo5, "1) Matar o feroz dragão.\n",
-                "2) Correr da situação\n", dragao20C, dragao20C.energia, scan);
+        Capítulo cap5 = new Capítulo("Capítulo 5", capitulo5, new String[] { "Matar o feroz dragão.\n",
+                "Correr da situação\n" }, dragao20C, dragao20C.energia, scan);
 
-        Capítulo cap6 = new Capítulo("Capítulo 6", capitulo6, "1) Recusar proposta da fada e expulsar ela.\n",
-                "2) Não se arriscar\n", fada, fada.energia, scan);
+        Capítulo cap6 = new Capítulo("Capítulo 6", capitulo6,
+                new String[] { "Recusar proposta da fada e expulsar ela.\n",
+                        "Não se arriscar\n" },
+                fada, fada.energia, scan);
 
         Capítulo cap7 = new Capítulo("Capítulo 7", capitulo7,
-                "1) Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.\n",
-                "2) Não se arriscar\n", mostroP, mostroP.energia, scan);
+                new String[] { "Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.\n",
+                        "Não se arriscar\n" },
+                mostroP, mostroP.energia, scan);
 
         // Lógica da história
         System.out.println(introducao);
         cap1.mostrar();
-        String c1 = Integer.toString(Capítulo.escolher());
+        int c1 = cap1.escolher();
 
-        if (c1.equals("1")) {
+        if (c1 == 0) {
             cap2.mostrar();
             leitor.energiaMudar(dragaoAlce.energia);
-            String c2 = Integer.toString(Capítulo.escolher());
+            int c2 = cap2.escolher();
 
-            if (c2.equals("1")) {
+            if (c2 == 0) {
                 cap4.mostrar();
                 leitor.energiaMudar(troll.energia);
-            } else if (c2.equals("2")) {
+            } else if (c2 == 1) {
                 cap4.mostrar();
                 leitor.energiaMudar(156);
             }
-        } else if (c1.equals("2")) {
+        } else if (c1 == 1) {
             cap3.mostrar();
             leitor.energiaMudar(mago.energia);
-            String c3 = Integer.toString(Capítulo.escolher());
+            int c3 = cap3.escolher();
 
-            if (c3.equals("1")) {
+            if (c3 == 0) {
                 cap5.mostrar();
                 leitor.energiaMudar(dragao20C.energia);
-                String c4 = Integer.toString(Capítulo.escolher());
+                int c4 = cap5.escolher();
 
-                if (c4.equals("1") || c4.equals("2")) {
+                if (c4 == 0 || c4 == 1) {
                     cap7.mostrar();
-                    Capítulo.escolher();
+                    cap7.escolher();
                     leitor.energiaMudar(-180);
-
-                } else if (c3.equals("2")) {
+                } else if (c3 == 1) {
                     cap6.mostrar();
                     leitor.energiaMudar(fada.energia);
-                    String c5 = Integer.toString(Capítulo.escolher());
+                    int c5 = cap6.escolher();
 
-                    if (c5.equals("1") || c5.equals("2")) {
+                    if (c5 == 0 || c5 == 1) {
                         cap7.mostrar();
-                        Capítulo.escolher();
+                        cap7.escolher();
                         leitor.energiaMudar(mostroP.energia);
                     }
-                } else if (c3.equals("2")) {
-                    cap6.mostrar();
-                    Capítulo.escolher();
-                    leitor.energiaMudar(fada.energia);
-
                 }
             }
-
         }
+
         // Finais
         if (leitor.energia <= 0) {
 
@@ -179,5 +176,4 @@ public class Main {
                     "Com esse êxito, você agora pode salvar sua família.");
         }
     }
-
 }

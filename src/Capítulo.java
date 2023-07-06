@@ -3,24 +3,21 @@ import java.util.Scanner;
 public class Capítulo {
     String nome;
     String texto;
-    String escolhaA;
-    String escolhaB;
+    String[] escolhas;
     Personagem personagem;
     int alteracaoEnergia;
     Scanner escaneador;
 
     public Capítulo(String nome,
             String texto,
-            String escolhaA,
-            String escolhaB,
+            String[] escolhas,
             Personagem personagem,
             int alteracaoEnergia,
             Scanner escanerador) {
 
         this.nome = nome;
         this.texto = texto;
-        this.escolhaA = escolhaA;
-        this.escolhaB = escolhaB;
+        this.escolhas = escolhas;
         this.personagem = personagem;
         this.alteracaoEnergia = alteracaoEnergia;
         this.escaneador = escanerador;
@@ -35,30 +32,29 @@ public class Capítulo {
         System.out.println(nome);
         System.out.println(texto);
         System.out.println("\n");
-        System.out.println(escolhaA);
-        System.out.println(escolhaB);
-        System.out.print("ESCOLHA-");
+
+        for (int i = 0; i < escolhas.length; i++) {
+            System.out.println((i + 1) + "- " + escolhas[i]);
+        }
     }
 
-    public static int escolher() {
-        Scanner scan = new Scanner(System.in);
+    public int escolher() {
         int escolha;
 
         do {
-            System.out.print("(Digite 1 para a escolha 1 ou 2 para a escolha 2): ");
-            String input = scan.nextLine();
+            System.out.print("(Digite o número da escolha): ");
+            String input = escaneador.nextLine();
 
             try {
-                escolha = Integer.parseInt(input);
-                if (escolha == 1 || escolha == 2) {
+                escolha = Integer.parseInt(input) - 1;
+                if (escolha >= 0 && escolha < escolhas.length) {
                     return escolha;
                 } else {
-                    System.out.println("\nEscolha inválida. Digite novamente.");
+                    System.out.println("\nEscolha inválida! Digite novamente.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("\nEntrada inválida. Digite novamente.");
+                System.out.println("\nEntrada inválida! Digite novamente.");
             }
         } while (true);
     }
-
 }
