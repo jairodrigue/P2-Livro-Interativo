@@ -6,12 +6,13 @@ public class Main {
 
         // Instanciando os personagens
         Personagem leitor = new Personagem("inicial", 1000);
-        Personagem dragaoAlce = new Personagem("Dragão dos Alces", 200);
-        Personagem mago = new Personagem("Mago", -800);
+        Personagem sem = new Personagem("referente não existir no ataque", 0);
         Personagem troll = new Personagem("Troll das Sombras", -970);
         Personagem dragao20C = new Personagem("Dragão de 20 Cabeças", 200);
         Personagem fada = new Personagem("Fada Vermelha", -950);
         Personagem mostroP = new Personagem("Mostro do Pântano", 590);
+        Personagem montanha = new Personagem("você ter seguido pelas Montanhas da Perdição", 150);
+        Personagem floresta = new Personagem("você ter seguido pela Floresta Proibida", 200);
 
         // História
         String introducao = ("\nBem-vindo ao incrível mundo interativo de -O Despertar do Aventureiro:\n"
@@ -73,107 +74,102 @@ public class Main {
                 + "verde e tem dentes assustadores.\n"
                 + "\n"
                 + "O que você vai fazer agora?");
+
+        String capituloRetorno = ("Você se depara com uma máquina do tempo e você pode entrar nela,\n"
+                + "mas fique ciente que essa máquina pode te levar para o passado ou para o futuro.\n"
+                + "\n"
+                + "Iae, você topa essa aventura?");
+
+        String final1 = ("Você encontra um cachorro que te mata retirando todos os seus orgãos para fora.\n"
+                + "Sendo assim você morre desesperadamente e não cumpre sua missão.\nTHE END...");
+
+        String final2 = ("Ops! Péssima escolha, você acaba de perder a batalha, porém continua bem\n"
+                + "mas infelismente não vai poder voltar para casa, pois quando chegar sua família\n"
+                + "já estará morta.\nTHE END...");
+
+        String final3 = ("Você recusou o pedido da fada que era uma entidade satânica, bom trabalho.\n"
+                + "Ao recusar esse pedido, foi lhe concedido por um bruxo que passava no local a\n"
+                + "lendária Pedra Encantada. E agora você cumpiu sua missãao. Parabéns\nTHE END...");
+
+        String final4 = ("Na tentativa de lutar com o mostro você descobre que ele na verdade é \n"
+                + "é um gato que realisa desejos vestido de papai noel em cima de uma pedra, então ao fim de sua\n"
+                + "transformação, você pede para obter a lendária Pedra Encantada, ele concede esse desejo\n"
+                + "portanto, agora você cumpiu sua missão e a pode voltar para casa e salvar sua família.\n"
+                + "Parabéns\nTHE END...");
+
         Scanner scan = new Scanner(System.in);
 
+
         // Instanciando os capítulos
-        Capítulo cap1 = new Capítulo("Capítulo 1", capitulo1,
-                new String[] { "Atravessar a densa Floresta Proibida.\n",
-                        "Seguir a trilha das Montanhas da Perdição.\n" },
-                leitor, leitor.energia, scan);
+        Capitulo cap1 = new Capitulo("Capítulo 1", capitulo1,
+                leitor, sem, scan);
 
-        Capítulo cap2 = new Capítulo("Capítulo 2", capitulo2,
-                new String[] { "Corre o máximo que puder.\n",
-                        "Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.\n" },
-                dragaoAlce, dragaoAlce.energia, scan);
+        Capitulo cap2 = new Capitulo("Capítulo 2", capitulo2,
+                leitor, floresta, scan);
 
-        Capítulo cap3 = new Capítulo("Capítulo 3", capitulo3, new String[] { "Tomar a poção.\n",
-                "Recusar e agradecer o mago.\n" },
-                mago, mago.energia, scan);
+        Capitulo cap3 = new Capitulo("Capítulo 3", capitulo3,
+                leitor, montanha, scan);
 
-        Capítulo cap4 = new Capítulo("Capítulo 4", capitulo4,
-                new String[] { "Lutar contra Grunthor, usando todas as suas habilidades de combate.\n",
-                        "Tentar escapar furtivamente, desviando-se silenciosamente e continuando\n"
-                                + "seu percurso.\n" },
-                troll, troll.energia, scan);
+        Capitulo cap4 = new Capitulo("Capítulo 4", capitulo4,
+                leitor, troll, scan);
 
-        Capítulo cap5 = new Capítulo("Capítulo 5", capitulo5, new String[] { "Matar o feroz dragão.\n",
-                "Correr da situação\n" }, dragao20C, dragao20C.energia, scan);
+        Capitulo cap5 = new Capitulo("Capítulo 5", capitulo5,
+                leitor, dragao20C, scan);
 
-        Capítulo cap6 = new Capítulo("Capítulo 6", capitulo6,
-                new String[] { "Recusar proposta da fada e expulsar ela.\n",
-                        "Não se arriscar\n" },
-                fada, fada.energia, scan);
+        Capitulo cap6 = new Capitulo("Capítulo 6", capitulo6,
+                leitor, fada, scan);
 
-        Capítulo cap7 = new Capítulo("Capítulo 7", capitulo7,
-                new String[] { "Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.\n",
-                        "Não se arriscar\n" },
-                mostroP, mostroP.energia, scan);
+        Capitulo cap7 = new Capitulo("Capítulo 7", capitulo7,
+                leitor, mostroP, scan);
+        
+        Capitulo capRetorno = new Capitulo("Capítulo RETORNO", capituloRetorno,
+                 leitor, mostroP, scan);
 
-        // Lógica da história
+        Capitulo fim1 = new Capitulo("FINAL:", final1,
+                 leitor, sem, scan);
+
+        Capitulo fim2 = new Capitulo("FINAL:", final2,
+                 leitor, sem, scan);
+
+        Capitulo fim3 = new Capitulo("FINAL:", final3,
+                 leitor, sem, scan);
+
+        Capitulo fim4 = new Capitulo("FINAL:", final4,
+                 leitor, sem, scan);
+
+
+        //Inserindo as escolhas no capítulo
+        cap1.escolhas = new Escolha[]{ new Escolha("Atravessar a densa Floresta Proibida.", cap2),
+        new Escolha("Seguir a trilha das Montanhas da Perdição.", cap3)};
+
+        cap2.escolhas = new Escolha[]{new Escolha("Corre o máximo que puder.", cap7),
+        new Escolha("Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.", cap5)};
+
+        cap3.escolhas = new Escolha[]{new Escolha ("Tomar a poção.",cap6),
+        new Escolha("Recusar e agradecer o mago.", capRetorno)};
+
+        cap4.escolhas = new Escolha[]{new Escolha("Lutar contra Grunthor, usando todas as suas habilidades de combate.",cap7),
+        new Escolha("Tentar escapar furtivamente, desviando-se silenciosamente e continuando", fim2)};
+
+        cap5.escolhas = new Escolha[]{new Escolha("Matar o feroz dragão.", fim2 ),
+        new Escolha("Correr da situação", fim1)};
+
+        cap6.escolhas = new Escolha[]{new Escolha("Recusar proposta da fada e expulsar ela.", fim3), 
+        new Escolha("Não se arriscar", cap4)};
+
+        cap7.escolhas = new Escolha[]{new Escolha("Lutar contra esse mostro e ter a possibilidade e "
+        +"melhorar suas energias.",fim1), new Escolha("Não se arriscar.", fim4 )};
+
+        capRetorno.escolhas = new Escolha[]{new Escolha("Entrar na máquina do tempo.", cap1),
+        new Escolha("Optar por não entrar.", fim4)};
+
+        fim1.escolhas = new Escolha[]{null,null,null};
+        fim2.escolhas = new Escolha[]{null,null,null};
+        fim3.escolhas = new Escolha[]{null,null,null};
+        fim4.escolhas = new Escolha[]{null,null,null};
+
+        Capitulo raiz = cap1;
         System.out.println(introducao);
-        cap1.mostrar();
-        int c1 = cap1.escolher();
-
-        if (c1 == 0) {
-            cap2.mostrar();
-            leitor.energiaMudar(dragaoAlce.energia);
-            int c2 = cap2.escolher();
-
-            if (c2 == 0) {
-                cap4.mostrar();
-                leitor.energiaMudar(troll.energia);
-            } else if (c2 == 1) {
-                cap4.mostrar();
-                leitor.energiaMudar(156);
-            }
-        } else if (c1 == 1) {
-            cap3.mostrar();
-            leitor.energiaMudar(mago.energia);
-            int c3 = cap3.escolher();
-
-            if (c3 == 0) {
-                cap5.mostrar();
-                leitor.energiaMudar(dragao20C.energia);
-                int c4 = cap5.escolher();
-
-                if (c4 == 0 || c4 == 1) {
-                    cap7.mostrar();
-                    cap7.escolher();
-                    leitor.energiaMudar(-180);
-                } else if (c3 == 1) {
-                    cap6.mostrar();
-                    leitor.energiaMudar(fada.energia);
-                    int c5 = cap6.escolher();
-
-                    if (c5 == 0 || c5 == 1) {
-                        cap7.mostrar();
-                        cap7.escolher();
-                        leitor.energiaMudar(mostroP.energia);
-                    }
-                }
-            }
-        }
-
-        // Finais
-        if (leitor.energia <= 0) {
-
-            System.out.print("\n(Sua energia final é ");
-            System.out.print(leitor.energia);
-            System.out.print(" XP)\n");
-            System.out.println("Com base na presença de energia negativa, você foi levado a\n"
-                    + "óbito em decorrência de uma condição de fraqueza exacerbada.");
-        } else if (leitor.energia > 0 && leitor.energia < 1500) {
-            System.out.print("\n(Sua energia final é ");
-            System.out.print(leitor.energia);
-            System.out.print(" XP)\n");
-            System.out.println("Embora você tenha sobrevivido, infelizmente não obteve sucesso \n"
-                    + "na obtenção da Pedra Encantada.");
-        } else {
-            System.out.print("\n(Sua energia final é ");
-            System.out.print(leitor.energia);
-            System.out.print(" XP)\n");
-            System.out.println("Parabéns pela conquista da Pedra Encantada!\n" +
-                    "Com esse êxito, você agora pode salvar sua família.");
-        }
-    }
+        raiz.executar();
+}
 }
