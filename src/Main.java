@@ -97,6 +97,7 @@ public class Main {
                 + "portanto, agora você cumpiu sua missão e a pode voltar para casa e salvar sua família.\n"
                 + "Parabéns\nTHE END...");
 
+                
         Scanner scan = new Scanner(System.in);
 
 
