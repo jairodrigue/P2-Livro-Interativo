@@ -6,6 +6,4 @@ public class Escolha {
         this.texto = texto;
         this.proximo = proximo;
     }
-
-    
 }

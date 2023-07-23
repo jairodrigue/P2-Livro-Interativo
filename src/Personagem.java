@@ -11,5 +11,4 @@ public class Personagem {
     public void energiaMudar(int energia) {
         this.energia += energia;
     }
-
 }

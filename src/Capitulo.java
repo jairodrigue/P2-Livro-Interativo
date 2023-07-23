@@ -13,14 +13,12 @@ public class Capitulo {
             Personagem personagem,
             Personagem personagensArbitrarios,
             Scanner escanerador) {
-
         this.nome = nome;
         this.texto = texto;
         this.personagem = personagem;
         this.personagensArbitrarios = personagensArbitrarios;
         this.escaneador = escanerador;
     }
-
     void mostrar() {
 
         System.out.println("\n-");
