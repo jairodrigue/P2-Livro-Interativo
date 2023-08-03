@@ -6,13 +6,6 @@ public class Main {
 
         // Instanciando os personagens
         Personagem leitor = new Personagem("inicial", 1000);
-        Personagem sem = new Personagem("referente não existir no ataque", 0);
-        Personagem troll = new Personagem("Troll das Sombras", -970);
-        Personagem dragao20C = new Personagem("Dragão de 20 Cabeças", 200);
-        Personagem fada = new Personagem("Fada Vermelha", -950);
-        Personagem mostroP = new Personagem("Mostro do Pântano", 590);
-        Personagem montanha = new Personagem("você ter seguido pelas Montanhas da Perdição", 150);
-        Personagem floresta = new Personagem("você ter seguido pela Floresta Proibida", 200);
 
         // História
         String introducao = ("\nBem-vindo ao incrível mundo interativo de -O Despertar do Aventureiro:\n"
@@ -23,7 +16,8 @@ public class Main {
                 + "coragem e determinação serão postas à prova. Sua missão é desbravar\n"
                 + "terras desconhecidas, enfrentar criaturas místicas em busca da\n"
                 + "lendária Pedra Encantada. A pedra é a úninica esperança para salvar\n"
-                + "sua família de uma terrível ameaça que paira sobre eles.");
+                + "sua família de uma terrível ameaça que paira sobre eles." +
+                "(Você inicia com 1000 XPS de energia)");
 
         String capitulo1 = ("\nVocê acorda em sua pequena cabana, localizada em uma vila isolada. O \n"
                 + "o vento sussurra sobre uma antiga profecia que paira sobre sua família.\n"
@@ -103,72 +97,68 @@ public class Main {
 
         // Instanciando os capítulos
         Capitulo cap1 = new Capitulo("Capítulo 1", capitulo1,
-                leitor, sem, scan);
+                leitor, 0, scan);
 
         Capitulo cap2 = new Capitulo("Capítulo 2", capitulo2,
-                leitor, floresta, scan);
+                leitor, 200, scan);
 
         Capitulo cap3 = new Capitulo("Capítulo 3", capitulo3,
-                leitor, montanha, scan);
+                leitor, 150, scan);
 
         Capitulo cap4 = new Capitulo("Capítulo 4", capitulo4,
-                leitor, troll, scan);
+                leitor,-970, scan);
 
         Capitulo cap5 = new Capitulo("Capítulo 5", capitulo5,
-                leitor, dragao20C, scan);
+                leitor, 200, scan);
 
         Capitulo cap6 = new Capitulo("Capítulo 6", capitulo6,
-                leitor, fada, scan);
+                leitor, -950, scan);
 
         Capitulo cap7 = new Capitulo("Capítulo 7", capitulo7,
-                leitor, mostroP, scan);
+                leitor, 590, scan);
         
         Capitulo capRetorno = new Capitulo("Capítulo RETORNO", capituloRetorno,
-                 leitor, mostroP, scan);
+                 leitor, 0, scan);
 
         Capitulo fim1 = new Capitulo("FINAL:", final1,
-                 leitor, sem, scan);
+                 leitor, 0, scan);
 
         Capitulo fim2 = new Capitulo("FINAL:", final2,
-                 leitor, sem, scan);
+                 leitor, 0, scan);
 
         Capitulo fim3 = new Capitulo("FINAL:", final3,
-                 leitor, sem, scan);
+                 leitor, 0, scan);
 
         Capitulo fim4 = new Capitulo("FINAL:", final4,
-                 leitor, sem, scan);
+                 leitor, 0, scan);
 
 
         //Inserindo as escolhas no capítulo
-        cap1.escolhas = new Escolha[]{ new Escolha("Atravessar a densa Floresta Proibida.", cap2),
-        new Escolha("Seguir a trilha das Montanhas da Perdição.", cap3)};
+        cap1.setEscolhas(new Escolha[]{ new Escolha("Atravessar a densa Floresta Proibida.", cap2),
+        new Escolha("Seguir a trilha das Montanhas da Perdição.", cap3)});
 
-        cap2.escolhas = new Escolha[]{new Escolha("Corre o máximo que puder.", cap7),
-        new Escolha("Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.", cap5)};
+        cap2.setEscolhas(new Escolha[]{new Escolha("Corre o máximo que puder.", cap7),
+        new Escolha("Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.", cap5)});
 
-        cap3.escolhas = new Escolha[]{new Escolha ("Tomar a poção.",cap6),
-        new Escolha("Recusar e agradecer o mago.", capRetorno)};
+        cap3.setEscolhas(new Escolha[]{new Escolha ("Tomar a poção.",cap6),
+        new Escolha("Recusar e agradecer o mago.", capRetorno)});
 
-        cap4.escolhas = new Escolha[]{new Escolha("Lutar contra Grunthor, usando todas as suas habilidades de combate.",cap7),
-        new Escolha("Tentar escapar furtivamente, desviando-se silenciosamente e continuando", fim2)};
+        cap4.setEscolhas(new Escolha[]{new Escolha("Lutar contra Grunthor, usando todas as suas habilidades de combate.",cap7),
+        new Escolha("Tentar escapar furtivamente, desviando-se silenciosamente e continuando", fim2)});
 
-        cap5.escolhas = new Escolha[]{new Escolha("Matar o feroz dragão.", fim2 ),
-        new Escolha("Correr da situação", fim1)};
+        cap5.setEscolhas(new Escolha[]{new Escolha("Matar o feroz dragão.", fim2 ),
+        new Escolha("Correr da situação", fim1)});
 
-        cap6.escolhas = new Escolha[]{new Escolha("Recusar proposta da fada e expulsar ela.", fim3), 
-        new Escolha("Não se arriscar", cap4)};
+        cap6.setEscolhas(new Escolha[]{new Escolha("Recusar proposta da fada e expulsar ela.", fim3), 
+        new Escolha("Não se arriscar", cap4)});
 
-        cap7.escolhas = new Escolha[]{new Escolha("Lutar contra esse mostro e ter a possibilidade e "
-        +"melhorar suas energias.",fim1), new Escolha("Não se arriscar.", fim4 )};
+        cap7.setEscolhas(new Escolha[]{new Escolha("Lutar contra esse mostro e ter a possibilidade e "
+        +"melhorar suas energias.",fim1), new Escolha("Não se arriscar.", fim4 )});
 
-        capRetorno.escolhas = new Escolha[]{new Escolha("Entrar na máquina do tempo.", cap1),
-        new Escolha("Optar por não entrar.", fim4)};
+        capRetorno.setEscolhas( new Escolha[]{new Escolha("Entrar na máquina do tempo.", cap1),
+        new Escolha("Optar por não entrar.", fim4)});
 
-        fim1.escolhas = new Escolha[]{null,null,null};
-        fim2.escolhas = new Escolha[]{null,null,null};
-        fim3.escolhas = new Escolha[]{null,null,null};
-        fim4.escolhas = new Escolha[]{null,null,null};
-
+    
         Capitulo raiz = cap1;
         System.out.println(introducao);
         raiz.executar();
