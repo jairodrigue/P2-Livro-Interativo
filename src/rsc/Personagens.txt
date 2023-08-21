@@ -1,5 +1,0 @@
-PERSONAGEM
-CHAVE:
-leitor
-ENERGIA:
-1000
