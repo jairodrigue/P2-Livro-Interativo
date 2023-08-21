@@ -1,14 +1,15 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
     private String nome;
     private String texto;
-    private Escolha[] escolhas;
+    private ArrayList<Escolha> escolhas;
     private Personagem personagem;
     private int alterarEnergia;
     private Scanner escaneador;
 
-    public Capitulo(String nome,
+     public Capitulo(String nome,
             String texto,
             Personagem personagem,
             int alterarEnergia,
@@ -18,7 +19,11 @@ public class Capitulo {
         this.personagem = personagem;
         this.alterarEnergia = alterarEnergia;
         this.escaneador = escaneador;
-    }
+            }
+    public void adicionarEscolha(Escolha escolha) {
+        escolhas.add(escolha);
+      }
+    
     private void mostrar() {
         this.personagem.energiaMudar(this.alterarEnergia);
         if (personagem.getEnergia()<0){
@@ -30,21 +35,22 @@ public class Capitulo {
         System.out.println("\n");
         System.out.println("(ENERGIA ATUAL: " + personagem.getEnergia() + " XPS)");
        try{
-        int validarTamanhoArray = (escolhas.length-1);
+        int validarTamanhoArray = (escolhas.size()-1);
         if (validarTamanhoArray !=2){
-        for (int i = 0; i < escolhas.length; i++) {
-            System.out.println((i + 1) + "- " + escolhas[i].getTexto());
+        for (int i = 0; i < escolhas.size(); i++) {
+            System.out.println((i + 1) + "- " + escolhas.get(i).getTexto());
         }
         
         int capEscolhido = escolher();
-        escolhas[capEscolhido].getProximo().mostrar();
+        escolhas.get(capEscolhido).getProximo().mostrar();
         }
         else {
             System.exit(0);
         }
     } catch (NullPointerException e) {
-    }
-        
+
+    } 
+   
         }
     private int escolher() {
         int escolha;
@@ -54,7 +60,7 @@ public class Capitulo {
 
             try {
                 escolha = Integer.parseInt(input) - 1;
-                if (escolha >= 0 && escolha < escolhas.length) {
+                if (escolha >= 0 && escolha < escolhas.size()) {
                     return escolha;
                 } else {
                     System.out.println("\nEscolha inválida! Digite novamente.");
@@ -74,10 +80,10 @@ public class Capitulo {
     public void setTexto(String texto) {
         this.texto = texto;
     }
-    public Escolha[] getEscolhas() {
+    public ArrayList<Escolha> getEscolhas() {
         return escolhas;
     }
-    public void setEscolhas(Escolha[] escolhas) {
+    public void setEscolhas(ArrayList<Escolha> escolhas) {
         this.escolhas = escolhas;
     }
     public Personagem getPersonagem() {

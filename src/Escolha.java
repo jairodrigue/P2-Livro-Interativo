@@ -19,5 +19,6 @@ public class Escolha {
     public void setProximo(Capitulo proximo) {
         this.proximo = proximo;
     }
+    
 
 }
