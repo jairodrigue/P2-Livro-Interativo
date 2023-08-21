@@ -1,0 +1,262 @@
+<CRIANDO OS CAPÍTULOS MODELOS>
+
+CAPITULO
+NOME:
+CAPITULO 1
+TEXTO:
+Bem-vindo ao incrível mundo interativo de - O Despertar do Aventureiro:Em Busca da Pedra Encantada. Prepare-se para embarcar em uma jornada emocionante, repleta de mistérios e desafios, onde você será o protagonista dessa incrível aventura. Neste livro, você assumirá o papel de um destemido aventureiro, cuja coragem e determinação serão postas à prova. Sua missão é desbravar terras desconhecidas, enfrentar criaturas místicas em busca da lendária Pedra Encantada. A pedra é a úninica esperança para salvar sua família de uma terrível ameaça que paira sobre eles.(Você inicia com 1000 XPS de energia) Você acorda em sua pequena cabana, localizada em uma vila isolada. O  vento sussurra sobre uma antiga profecia que paira sobre sua família. Intrigado, decide investigar e descobre que uma pedra mística, conhecida como a Pedra Encantada, possui o poder de salvar sua família de uma terrível ameaça. Animado e decidido a enfrentar qualquer desafio, você parte em uma jornada em busca dessa pedra lendária. Qual caminho você escolhe para começar sua busca?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+0
+
+CAPITULO
+NOME:
+CAPITULO 2
+TEXTO:
+Você decide aventurar-se pela Floresta Proibida, um local sombrio e misterioso, cheio de criaturas perigosas e enigmas ocultos. Enquanto caminha pelas trilhas sinuosas, um terrível dragão dos Alces paira bem na sua frente. O que você faz agora?"
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+200
+
+CAPITULO
+NOME:
+CAPITULO 3
+TEXTO:
+Você opta por enfrentar os desafios das Montanhas da Perdição, um local inóspito e traiçoeiro, com picos cobertos de neve e abismos profundos. Enquanto escala as íngremes encostas, se depara com um mago assustador que te chama e te dá uma poção. Você não sabe o efeito da poção. O que você faz?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+150
+
+CAPITULO
+NOME:
+CAPITULO 4
+TEXTO:
+Seu coração bate acelerado enquanto você segue o caminho iluminado pelo sol. No entanto, ao longo do trajeto, você escuta um rugido assustador e um monstro emerge dos arbustos à sua frente. O monstro é um temível Troll das Sombras chamado Grunthor, um ser enorme com presas afiadas e olhos faiscantes. O que você decide fazer?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+-970
+
+CAPITULO
+NOME:
+CAPITULO 5
+TEXTO:
+Você segue com o seu mapa subindo pela Montanha da Sucuri. Ao chegar no topo encontra um dragão de 20 cabeças. Assustado o que você vai fazer?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+200
+
+CAPITULO
+NOME:
+CAPITULO 6
+TEXTO:
+Você dorme depois de um dia agitado. Mas ao acordar percebe que não está só. Existe uma fada vermelha dentro da sua mochila. Assustado você tem uma conversa com ela. Até que ela oferece ficar ao seu lado e te oferecer apoio durante sua jornada. Agora, o que você vai fazer?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+-950
+
+CAPITULO
+NOME:
+CAPITULO 7
+TEXTO:
+Sua jornada continua, e dessa vez você quase cai dentro de um pântano. Ao olhar para os lados, percebe que está em um ambiente escuro e sombrio. Surge forte e imponente um mostro, ele está completamente coberto por uma gosma verde e tem dentes assustadores. O que você vai fazer agora?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+590
+
+CAPITULO
+NOME:
+CAPITULO RETORNO
+TEXTO:
+Você se depara com uma máquina do tempo e você pode entrar nela, mas fique ciente que essa máquina pode te levar para o passado ou para o futuro. Iae, você topa essa aventura?
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+0
+
+CAPITULO
+NOME:
+CAPITULO FINAL 1
+TEXTO:
+Você encontra um cachorro que te mata retirando todos os seus orgãos para fora. Sendo assim você morre desesperadamente e não cumpre sua missão. THE END...
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+0
+
+CAPITULO
+NOME:
+CAPITULO FINAL 2
+TEXTO:
+Ops! Péssima escolha, você acaba de perder a batalha, porém continua bem mas infelismente não vai poder voltar para casa, pois quando chegar sua família já estará morta. THE END...
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+0
+
+CAPITULO
+NOME:
+CAPITULO FINAL 3
+TEXTO:
+Você recusou o pedido da fada que era uma entidade satânica, bom trabalho. Ao recusar esse pedido, foi lhe concedido por um bruxo que passava no local a lendária Pedra Encantada. E agora você cumpiu sua missãao. Parabéns! THE END...
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+0
+
+CAPITULO
+NOME:
+CAPITULO FINAL 4
+TEXTO:
+Na tentativa de lutar com o mostro você descobre que ele na verdade é um gato que realisa desejos vestido de papai noel em cima de uma pedra, então ao fim de sua transformação, você pede para obter a lendária Pedra Encantada, ele concede esse desejo. Portanto, agora você cumpiu sua missão e a pode voltar para casa e salvar sua família. Parabéns! THE END...
+PERSONAGEM:
+leitor
+MUDANÇA DE ENERGIA:
+0
+</CRIANDO OS CAPÍTULOS MODELOS>
+
+<CRIANDO AS ESCOLHAS DOS CAPITULOS>
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 1
+TEXTO:
+Atravessar a densa Floresta Proibida.
+CAPITULO DE DESTINO:
+CAPITULO 2
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 1
+TEXTO:
+Seguir a trilha das Montanhas da Perdição.
+CAPITULO DE DESTINO:
+CAPITULO 3
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 2
+TEXTO:
+Corre o máximo que puder.
+CAPITULO DE DESTINO:
+CAPITULO 7
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 2
+TEXTO:
+Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.
+CAPITULO DE DESTINO:
+CAPITULO 5
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 3
+TEXTO:
+Tomar a poção.
+CAPITULO DE DESTINO:
+CAPITULO 6
+
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 3
+TEXTO:
+Recusar e agradecer o mago.
+CAPITULO DE DESTINO:
+CAPITULO RETORNO
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 4
+TEXTO:
+Lutar contra Grunthor, usando todas as suas habilidades de combate.
+CAPITULO DE DESTINO:
+CAPITULO 7
+
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 4
+TEXTO:
+Tentar escapar furtivamente, desviando-se silenciosamente e continuando
+CAPITULO DE DESTINO:
+CAPITULO FINAL 1
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 5
+TEXTO:
+Matar o feroz dragão.
+CAPITULO DE DESTINO:
+CAPITULO FINAL 2
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 5
+TEXTO:
+Correr da situação
+CAPITULO DE DESTINO:
+CAPITULO FINAL 1
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 6
+TEXTO:
+Recusar proposta da fada e expulsar ela.
+CAPITULO DE DESTINO:
+CAPITULO FINAL 3
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 6
+TEXTO:
+Não se arriscar
+CAPITULO DE DESTINO:
+CAPITULO 4
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 7
+TEXTO:
+Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.
+CAPITULO DE DESTINO:
+CAPITULO FINAL 1
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO 7
+TEXTO:
+Não se arriscar.
+CAPITULO DE DESTINO:
+CAPITULO FINAL 4
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO RETORNO
+TEXTO:
+Entrar na máquina do tempo.
+CAPITULO DE DESTINO:
+CAPITULO 1
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+CAPITULO RETORNO
+TEXTO:
+Optar por não entrar.
+CAPITULO DE DESTINO:
+CAPITULO FINAL 4
