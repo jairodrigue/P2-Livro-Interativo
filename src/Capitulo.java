@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Capitulo {
     private String nome;
     private String texto;
-    private ArrayList<Escolha> escolhas;
+    protected ArrayList<Escolha> escolhas;
     private Personagem personagem;
     private int alterarEnergia;
     private Scanner escaneador;
@@ -16,10 +17,17 @@ public class Capitulo {
             Scanner escaneador) {
         this.nome = nome;
         this.texto = texto;
+        this.escolhas = new ArrayList<Escolha>();
         this.personagem = personagem;
         this.alterarEnergia = alterarEnergia;
         this.escaneador = escaneador;
             }
+
+         protected Capitulo() {
+        this.texto = "";
+        this.escolhas = new ArrayList<Escolha>();
+              }
+
     public void adicionarEscolha(Escolha escolha) {
         escolhas.add(escolha);
       }
@@ -35,14 +43,12 @@ public class Capitulo {
         System.out.println("\n");
         System.out.println("(ENERGIA ATUAL: " + personagem.getEnergia() + " XPS)");
        try{
-        int validarTamanhoArray = (escolhas.size()-1);
+        int validarTamanhoArray = (this.escolhas.size()-1);
         if (validarTamanhoArray !=2){
         for (int i = 0; i < escolhas.size(); i++) {
             System.out.println((i + 1) + "- " + escolhas.get(i).getTexto());
         }
         
-        int capEscolhido = escolher();
-        escolhas.get(capEscolhido).getProximo().mostrar();
         }
         else {
             System.exit(0);
@@ -52,7 +58,7 @@ public class Capitulo {
     } 
    
         }
-    private int escolher() {
+    private String escolher() {
         int escolha;
         do {
             System.out.print("(Digite o número da escolha): ");
@@ -61,7 +67,8 @@ public class Capitulo {
             try {
                 escolha = Integer.parseInt(input) - 1;
                 if (escolha >= 0 && escolha < escolhas.size()) {
-                    return escolha;
+                    String escolhaS = escolha + "";
+                    return escolhaS;
                 } else {
                     System.out.println("\nEscolha inválida! Digite novamente.");
                 }
@@ -70,8 +77,13 @@ public class Capitulo {
             }
         } while (true);
     }
-    public void executar(){
+
+    public void executar(HashMap<String, Capitulo> capitulos){
         mostrar();
+
+        String capProx = escolher();
+        capitulos.get(capProx).executar(capitulos);
+        
     }
     
     public void setNome(String nome) {

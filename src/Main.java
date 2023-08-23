@@ -13,6 +13,6 @@ public class Main {
         HashMap<String, Capitulo> capitulos = leitorD.lendoCapitulos("rsc//Capitulo.txt", personagens, scan);
        Capitulo raiz = capitulos.get("CAPITULO 1");
 
-        raiz.executar();
+        raiz.executar(capitulos);
 	}
 }

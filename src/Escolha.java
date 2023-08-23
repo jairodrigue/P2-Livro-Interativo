@@ -1,24 +1,23 @@
 public class Escolha {
     private String texto;
-    private Capitulo proximo;
+    private String proximo;
 
-    public Escolha(String texto, Capitulo proximo) {
+    public Escolha(String texto, String proximo) {
         this.texto = texto;
         this.proximo = proximo;
     }
     public String getTexto(){
         return this.texto;
     }
-    public Capitulo getProximo() {
+    public String getProximo() {
         return proximo;
     }
 
     public void setTexto(String texto) {
         this.texto = texto;
     }
-    public void setProximo(Capitulo proximo) {
+    public void setProximo(String proximo) {
         this.proximo = proximo;
     }
-    
 
 }
