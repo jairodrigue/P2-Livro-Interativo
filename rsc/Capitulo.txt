@@ -10,6 +10,13 @@ leitor
 MUDANÇA DE ENERGIA:
 0
 
+ESCOLHA
+CAPITULO 1
+Atravessar a densa Floresta Proibida.
+CAPITULO 2
+Seguir a trilha das Montanhas da Perdição.
+CAPITULO 3
+
 CAPITULO
 NOME:
 CAPITULO 2
@@ -19,6 +26,13 @@ PERSONAGEM:
 leitor
 MUDANÇA DE ENERGIA:
 200
+
+ESCOLHA
+CAPITULO 2
+Corre o máximo que puder.
+CAPITULO 7
+Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.
+CAPITULO 5
 
 CAPITULO
 NOME:
@@ -30,6 +44,13 @@ leitor
 MUDANÇA DE ENERGIA:
 150
 
+ESCOLHA
+CAPITULO 3
+Tomar a poção.
+CAPITULO 6
+Recusar e agradecer o mago.
+CAPITULO RETORNO
+
 CAPITULO
 NOME:
 CAPITULO 4
@@ -39,6 +60,13 @@ PERSONAGEM:
 leitor
 MUDANÇA DE ENERGIA:
 -970
+
+ESCOLHA
+CAPITULO 4
+Lutar contra Grunthor, usando todas as suas habilidades de combate.
+CAPITULO 7
+Tentar escapar furtivamente, desviando-se silenciosamente e continuando
+CAPITULO FINAL 1
 
 CAPITULO
 NOME:
@@ -50,6 +78,13 @@ leitor
 MUDANÇA DE ENERGIA:
 200
 
+ESCOLHA
+CAPITULO 5
+Matar o feroz dragão.
+CAPITULO FINAL 2
+Correr da situação
+CAPITULO FINAL 1
+
 CAPITULO
 NOME:
 CAPITULO 6
@@ -59,6 +94,13 @@ PERSONAGEM:
 leitor
 MUDANÇA DE ENERGIA:
 -950
+
+ESCOLHA
+CAPITULO 6
+Recusar proposta da fada e expulsar ela.
+CAPITULO FINAL 3
+Não se arriscar
+CAPITULO 4
 
 CAPITULO
 NOME:
@@ -70,6 +112,13 @@ leitor
 MUDANÇA DE ENERGIA:
 590
 
+ESCOLHA
+CAPITULO 7
+Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.
+CAPITULO FINAL 1
+Não se arriscar.
+CAPITULO FINAL 4
+
 CAPITULO
 NOME:
 CAPITULO RETORNO
@@ -79,6 +128,13 @@ PERSONAGEM:
 leitor
 MUDANÇA DE ENERGIA:
 0
+
+ESCOLHA
+CAPITULO RETORNO
+Entrar na máquina do tempo.
+CAPITULO 1
+Optar por não entrar.
+CAPITULO FINAL 4
 
 CAPITULO
 NOME:
@@ -119,144 +175,3 @@ PERSONAGEM:
 leitor
 MUDANÇA DE ENERGIA:
 0
-</CRIANDO OS CAPÍTULOS MODELOS>
-
-<CRIANDO AS ESCOLHAS DOS CAPITULOS>
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 1
-TEXTO:
-Atravessar a densa Floresta Proibida.
-CAPITULO DE DESTINO:
-CAPITULO 2
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 1
-TEXTO:
-Seguir a trilha das Montanhas da Perdição.
-CAPITULO DE DESTINO:
-CAPITULO 3
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 2
-TEXTO:
-Corre o máximo que puder.
-CAPITULO DE DESTINO:
-CAPITULO 7
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 2
-TEXTO:
-Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.
-CAPITULO DE DESTINO:
-CAPITULO 5
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 3
-TEXTO:
-Tomar a poção.
-CAPITULO DE DESTINO:
-CAPITULO 6
-
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 3
-TEXTO:
-Recusar e agradecer o mago.
-CAPITULO DE DESTINO:
-CAPITULO RETORNO
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 4
-TEXTO:
-Lutar contra Grunthor, usando todas as suas habilidades de combate.
-CAPITULO DE DESTINO:
-CAPITULO 7
-
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 4
-TEXTO:
-Tentar escapar furtivamente, desviando-se silenciosamente e continuando
-CAPITULO DE DESTINO:
-CAPITULO FINAL 1
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 5
-TEXTO:
-Matar o feroz dragão.
-CAPITULO DE DESTINO:
-CAPITULO FINAL 2
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 5
-TEXTO:
-Correr da situação
-CAPITULO DE DESTINO:
-CAPITULO FINAL 1
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 6
-TEXTO:
-Recusar proposta da fada e expulsar ela.
-CAPITULO DE DESTINO:
-CAPITULO FINAL 3
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 6
-TEXTO:
-Não se arriscar
-CAPITULO DE DESTINO:
-CAPITULO 4
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 7
-TEXTO:
-Lutar contra esse mostro e ter a possibilidade e melhorar suas energias.
-CAPITULO DE DESTINO:
-CAPITULO FINAL 1
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO 7
-TEXTO:
-Não se arriscar.
-CAPITULO DE DESTINO:
-CAPITULO FINAL 4
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO RETORNO
-TEXTO:
-Entrar na máquina do tempo.
-CAPITULO DE DESTINO:
-CAPITULO 1
-
-
-ESCOLHA
-CAPITULO DE ORIGEM:
-CAPITULO RETORNO
-TEXTO:
-Optar por não entrar.
-CAPITULO DE DESTINO:
-CAPITULO FINAL 4
