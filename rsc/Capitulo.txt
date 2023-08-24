@@ -1,6 +1,27 @@
 <CRIANDO OS CAPÍTULOS MODELOS>
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXX         XXXXXXXX
+XXXXXXXXXXXXXXXX              XXXXXXX
+XXXXXXXXXXXXX                   XXXXX
+ XXX    _______        _______   XXX      
+  XX                              XX        
+ ( X     ( 0 )          ( 0 )     X )          
+( +I                            I+ )
+ ( I                            I )
+  (I            /   \            I)
+   I           ( ___ )           I
+   I    _  :::::::::::::::  _    i
+    \    \___ ::::::::: ___/    /
+     \_      \_________/      _/
+       \        \___,        /
+         \                 /
+          |\             /|
+          |  \_________/  |
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 1
 TEXTO:
@@ -10,6 +31,7 @@ leitor
 MUDANÇA DE ENERGIA:
 0
 
+
 ESCOLHA
 CAPITULO 1
 Atravessar a densa Floresta Proibida.
@@ -17,7 +39,20 @@ CAPITULO 2
 Seguir a trilha das Montanhas da Perdição.
 CAPITULO 3
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+          ,  ,
+          \\ \\           
+          ) \\ \\    _p_ 
+          )^\))\))  /  *\ 
+           \_|| || / /^`-' 
+  __       -\ \\--/ / 
+<'  \\___/   ___. )'
+     `====\ )___/\\ 
+          //     `"
+          \\    /  \
+          `"
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 2
 TEXTO:
@@ -34,7 +69,19 @@ CAPITULO 7
 Luta com o dragão, mesmo sabendo que pode ou não perder suas energias.
 CAPITULO 5
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+     (\-"```"-/)
+     //^\   /^\\
+    ;/ ~_\ /_~ \;
+    |  / \Y/ \  |
+   (,  \0/ \0/  ,)
+    |   /   \   |
+    | (_\._./_) |
+     \ \v-.-v/ /
+      \ `===' /
+       `-----`
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 3
 TEXTO:
@@ -51,7 +98,27 @@ CAPITULO 6
 Recusar e agradecer o mago.
 CAPITULO RETORNO
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+      -. -. `.  / .-' _.'  _
+     .--`. `. `| / __.-- _' `
+    '.-.  \  \ |  /   _.' `_
+    .-. \  `  || |  .' _.-' `.
+  .' _ \ '  -    -'  - ` _.-.
+   .' `. %%%%%   | %%%%% _.-.`-
+ .' .-. ><(@)> ) ( <(@)>< .-.`.
+   (("`(   -   | |   -   )'"))
+  / \\#)\    (.(_).)    /(#//\
+ ' / ) ((  /   | |   \  )) (`.`.
+ .'  (.) \ .md88o88bm. / (.) \)
+   / /| / \ `Y88888Y' / \ | \ \
+ .' / O  / `.   -   .' \  O \ \\
+  / /(O)/ /| `.___.' | \\(O) \
+   / / / / |  |   |  |\  \  \ \
+   / / // /|  |   |  |  \  \ \  VK
+ _.--/--/'( ) ) ( ) ) )`\-\-\-._
+( ( ( ) ( ) ) ( ) ) ( ) ) ) ( ) )
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 4
 TEXTO:
@@ -68,11 +135,29 @@ CAPITULO 7
 Tentar escapar furtivamente, desviando-se silenciosamente e continuando
 CAPITULO FINAL 1
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+       ___====-_  _-====___
+           _--^^^#####//      \\#####^^^--_
+        _-^##########// (    ) \\##########^-_
+       -############//  |\^^/|  \\############-
+     _/############//   (@::@)   \\############\_
+    /#############((     \\//     ))#############\
+   -###############\\    (oo)    //###############-
+  -#################\\  / VV \  //#################-
+ -###################\\/      \//###################-
+_#/|##########/\######(   /\   )######/\##########|\#_
+|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+`  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
+   `   `  `      `   / | |  | | \   '      '  '   '
+                    (  | |  | |  )
+                   __\ | |  | | /__
+                  (vvv(VVV)(VVV)vvv)
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 5
 TEXTO:
-Você segue com o seu mapa subindo pela Montanha da Sucuri. Ao chegar no topo encontra um dragão de 20 cabeças. Assustado o que você vai fazer?
+Você segue com o seu mapa subindo pela Montanha da Sucuri. Ao chegar no topo encontra um dragão de chamas. Assustado o que você vai fazer?
 PERSONAGEM:
 leitor
 MUDANÇA DE ENERGIA:
@@ -85,7 +170,21 @@ CAPITULO FINAL 2
 Correr da situação
 CAPITULO FINAL 1
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+   _   vvvvvvvvv   _
+  ( `-._\...../_.-' )
+   \   ((('_')))   /
+    )   ))) (((   (
+   (   ((( v )))   )
+    )`--' )X( `-._(
+   /   _./   \._   \
+  /  .' /     \ `.  \
+ (__/  /       \  \__)
+      /         \
+     /           \
+    WwWwWwWwWwWwWwW
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 6
 TEXTO:
@@ -102,7 +201,24 @@ CAPITULO FINAL 3
 Não se arriscar
 CAPITULO 4
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+         ,     .
+        /(     )\               A
+   .--.( `.___.' ).--.         /_\
+   `._ `%_&%#%$_ ' _.'     /| <___> |\
+      `|(@\*%%/@)|'       / (  |L|  ) \
+       |  |%%#|  |       J d8bo|=|od8b L
+        \ \$#%/ /        | 8888|=|8888 |
+        |\|%%#|/|        J Y8P"|=|"Y8P F
+        | (.".)%|         \ (  |L|  ) /
+    ___.'  `-'  `.___      \|  |L|  |/
+  .'#*#`-       -'$#*`.       / )|
+ /#%^#%*_ *%^%_  #  %$%\    .J (__)
+ #&  . %%%#% ###%*.   *%\.-'&# (__)
+ %*  J %.%#_|_#$.\J* \ %'#%*^  (__)
+ *#% J %$%%#|#$#$ J\%   *   .--|(_)
+FIM_DA_IMAGEM
 NOME:
 CAPITULO 7
 TEXTO:
@@ -119,7 +235,20 @@ CAPITULO FINAL 1
 Não se arriscar.
 CAPITULO FINAL 4
 
-CAPITULO
+CAPITULO_COM_IMAGEM
+IMAGEM:
+  _.  .--./|  |\.--.  ._
+ //|  |____________|  |\\
+||__\_|            |_/__||
+||_-- |   MÁQUINA  | --_||
+||_() |     DO     | ()_||
+|| --_|   TEMPO    |_-- ||
+||||  |            |  ||||
+ \|| /|____________|\_||/
+ |||_| \.||||||||./ |_|||
+ \ _ /   \--==--/   \ _ /
+  <_>  /----------\  <_>
+FIM_DA_IMAGEM
 NOME:
 CAPITULO RETORNO
 TEXTO:

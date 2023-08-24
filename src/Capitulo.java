@@ -6,19 +6,29 @@ import java.util.Scanner;
 public class Capitulo {
     private String nome;
     private String texto;
-    private ArrayList<Escolha> escolhas;
+    
     private Personagem personagem;
     private Scanner scanner;
     private int alterarEnergia;
+    protected ArrayList<Escolha> escolhas;
 
     public Capitulo(String nome, String texto, Personagem personagem,int alterarEnergia, Scanner scanner) {
         this.nome = nome;
         this.texto = texto;
-        this.escolhas = new ArrayList<>();
+       
         this.personagem = personagem;
         this.scanner = scanner;
         this.alterarEnergia = alterarEnergia;
+         this.escolhas = new ArrayList<>();
     }
+
+    public Capitulo(HashMap<String, Personagem> personagens, Scanner scanCapitulo, HashMap<String, Capitulo> capitulos,
+            Scanner scanArquivoCapitulos) {
+                this.ler(personagens, scanCapitulo, capitulos, scanArquivoCapitulos);
+                this.escolhas = new ArrayList<>();
+
+    }
+    protected Capitulo() {}
 
     public void executar(HashMap<String, Capitulo> capitulos) {
         mostrar();
@@ -38,7 +48,7 @@ public class Capitulo {
         System.out.println("***********     " + titulo + "      ************");
         System.out.println(decorator);
     }
-    private void mostrar() {
+    public void mostrar() {
         
         this.personagem.energiaMudar(this.alterarEnergia);
         if (personagem.getEnergia()<0){
@@ -92,6 +102,24 @@ public class Capitulo {
         return proxEscolha;
 
     }
+    protected void ler(HashMap<String, Personagem> personagens, Scanner scanCapitulo,
+                    HashMap<String, Capitulo> capitulos, Scanner scanArquivoCapitulos) {
+    String linha;
+    this.scanner =scanCapitulo;
+
+    linha = scanArquivoCapitulos.nextLine(); //nome
+    this.nome = scanArquivoCapitulos.nextLine();
+    linha = scanArquivoCapitulos.nextLine(); //texto
+    this.texto = scanArquivoCapitulos.nextLine();
+    linha = scanArquivoCapitulos.nextLine(); //personagem
+    this.personagem = personagens.get(scanArquivoCapitulos.nextLine());
+    linha = scanArquivoCapitulos.nextLine(); // mudar energia
+    this.alterarEnergia = Integer.parseInt(scanArquivoCapitulos.nextLine());
+    }
+    public String getNome(){
+         return this.nome;
+}
+
     public static boolean compareStrings(String str1, String str2) {
         String normalizedStr1 = normalizeString(str1);
         String normalizedStr2 = normalizeString(str2);
