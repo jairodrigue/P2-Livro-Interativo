@@ -42,18 +42,22 @@ public class LeitorDeDados {
         File arquivoCapitulos = new File(caminhoDoArquivoCapitulo);
 
         try {
+
             Scanner scanArquivoCapitulos = new Scanner(arquivoCapitulos, "UTF-8");
+
             
             String nomeCapitulo = "";
             String textoCapitulo = "";
             String nomePersonagem = "";
             int mudancaDeEnergia = 0;
-
             String linha = "";
 
-            while (!linha.equalsIgnoreCase("CAPITULO") && !linha.equalsIgnoreCase("ESCOLHA")){
+
+            while (scanArquivoCapitulos.hasNextLine()) {
                 linha = scanArquivoCapitulos.nextLine();
-            
+                if (!linha.equals("CAPITULO") && !linha.equals("ESCOLHA")) {
+                    continue;
+                }
             if (linha.equalsIgnoreCase("CAPITULO")){
             linha = scanArquivoCapitulos.nextLine(); //nome
             nomeCapitulo = scanArquivoCapitulos.nextLine();
@@ -67,10 +71,21 @@ public class LeitorDeDados {
             capitulos.put(nomeCapitulo, new Capitulo(nomeCapitulo, textoCapitulo, personagens.get(nomePersonagem), mudancaDeEnergia, scanCapitulo));
                  
             } else if (linha.equalsIgnoreCase("ESCOLHA")){
-                lerEscolha(capitulos, scanArquivoCapitulos); 
-
+            String capituloOrigem = scanArquivoCapitulos.nextLine();
+            String textoEscolha = scanArquivoCapitulos.nextLine();
+            String capituloDestino = scanArquivoCapitulos.nextLine();
+            String textoEscolha2 = scanArquivoCapitulos.nextLine();
+            String capituloDestino2 = scanArquivoCapitulos.nextLine();
+            
+            Escolha escolha1 = new Escolha(textoEscolha, capituloDestino);
+            Escolha escolha2 = new Escolha(textoEscolha2, capituloDestino2);
+            
+            capitulos.get(capituloOrigem).adicionarEscolha(escolha1);
+            capitulos.get(capituloOrigem).adicionarEscolha(escolha2);
+            
             }
         }
+    
     }
         
         
@@ -82,22 +97,4 @@ public class LeitorDeDados {
     
 
     }
-    private void lerEscolha(
-        HashMap<String, Capitulo> capitulos,
-        Scanner scanArquivoCapitulos) {
-
-            String capituloOrigem = scanArquivoCapitulos.nextLine();
-            String textoEscolha = scanArquivoCapitulos.nextLine();
-            String capituloDestino = scanArquivoCapitulos.nextLine();
-            String textoEscolha2 = scanArquivoCapitulos.nextLine();
-            String capituloDestino2 = scanArquivoCapitulos.nextLine();
-            
-                      
-            capitulos.get(capituloOrigem).adicionarEscolha(new Escolha(textoEscolha, capituloDestino));
-            capitulos.get(capituloOrigem).adicionarEscolha(new Escolha(textoEscolha2, capituloDestino2));
-       
-            scanArquivoCapitulos.close();
-        }
-
 }
-
